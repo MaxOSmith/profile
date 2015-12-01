@@ -7,7 +7,7 @@ export PATH=$PATH:/home/mxsmith/anaconda/bin
 # Colors
 ##########################################
 # Special
-COLOR_OFF='\e[0m'
+COLOR_OFF='\[\e[0m\]'
 
 # Foreground Intense
 FI_YELLOW='\[\e[0;93m\]'  
