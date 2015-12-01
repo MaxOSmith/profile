@@ -15,4 +15,4 @@ FI_BLUE='\[\e[0;94m\]'
 
 # Background
 
-PS1="\[$FI_YELLOW\][\t - \u]\[$FI_BLUE\]\w\[$FI_YELLOW\]\$\[$COLOR_OFF\]"
+PS1="\[\[$FI_YELLOW\][\t - \u]\[$FI_BLUE\]\w\[$FI_YELLOW\]\$\[$COLOR_OFF\]\]"
