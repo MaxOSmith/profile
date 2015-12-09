@@ -1,5 +1,6 @@
 alias run="bash run_tests.sh"
 alias speed="ipython speed.py"
+alias lla="ls -la"
 
 export PATH=$PATH:/home/mxsmith/anaconda/bin
 
@@ -16,3 +17,6 @@ FI_BLUE='\[\e[0;94m\]'
 # Background
 
 PS1="${FI_YELLOW}[\t - \u]${FI_BLUE}\w${FI_YELLOW}\$${COLOR_OFF}"
+
+# Load base16 theme
+bash profile/themes/base16-eighties-dark.sh

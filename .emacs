@@ -1,5 +1,6 @@
 ;; Set theme
-(load-theme 'tsdh-dark)
+;; (load-theme 'tsdh-dark)
+;;(load "~/profile/themes/base16-eighties-dark.el")
 
 ;; 4 tab spaces
 (setq tab-width 4)
