@@ -9,3 +9,8 @@
 
 ;; Show columns
 (setq column-number-mode t)
+
+;; Line numbering
+(global-linum-mode 1)
+(set-face-foreground 'linum "#f2777a")
+(setq linum-format "%3d|")
