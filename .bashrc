@@ -6,7 +6,7 @@
 #    e.g., List all in current directory
 # $lla
 function lla() {
-    ls -la
+    ls -la $1
 }
 
 # History search
