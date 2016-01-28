@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #=================================================
 # Functions/Etc
 #=================================================
@@ -31,8 +33,12 @@ export HISTCONTROL=ignoreboth:erasedups
 # export VISUAL=emacs
 # export EDITOR=emacs
 
-# Set-up git aware prompt
-source ~/profile/bash/.git-prompt.sh
+#=================================================
+# Import Statements
+#=================================================
+# Git aware prompt
+source ~/profile/bash/git-prompt.sh
+source ~/profile/bash/bg-count.sh
 
 #=================================================
 # Aliases
@@ -70,10 +76,9 @@ COLOR_OFF='\[\e[0m\]'
 FI_YELLOW='\[\e[0;93m\]'
 FI_BLUE='\[\e[0;94m\]'
 
-# Background
-
 # Prompt String
-PS1="${FI_YELLOW}[\t - \u]${FI_BLUE}\w${FI_YELLOW}$(__git_ps1 ' (%s)')\$${COLOR_OFF}"
+set_bg_count
+PS1="${FI_YELLOW}[\t]${FI_BLUE}\w${FI_YELLOW}\$(set_bg_count)\$${COLOR_OFF}"
 
 # Color ls - Stolen from DJSnider
 alias ls="ls --color=auto --group-directories-first"
