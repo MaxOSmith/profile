@@ -53,6 +53,7 @@ alias ssh_485="ssh mxsmith@eecs485-02.eecs.umich.edu"
 export PATH=$PATH:/home/mxsmith/anaconda/bin
 
 # Lazy/Typos
+alias emacs="emacs -nw"
 alias e="emacs"
 
 alias l="ls"
@@ -67,8 +68,8 @@ alias ggraph="git log --graph --full-history --all --color --pretty=tformat:\"%x
 # Colors
 #=================================================
 # Load base16 theme
-BASE16_SHELL="$HOME/profile/themes/base16-eighties-dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# BASE16_SHELL="$HOME/profile/themes/base16-eighties-dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Special
 COLOR_OFF='\[\e[0m\]'
@@ -79,7 +80,7 @@ FI_BLUE='\[\e[0;94m\]'
 
 # Prompt String
 set_bg_count
-PS1="${FI_YELLOW}[\t]${FI_BLUE}\w${FI_YELLOW}\$(set_bg_count)\$${COLOR_OFF}"
+PS1="${FI_YELLOW}[\t]${FI_BLUE}\w${FI_YELLOW}\$(__git_ps1)\$(set_bg_count)\$${COLOR_OFF}"
 
 # Color ls - Stolen from DJSnider
 alias ls="ls --color=auto --group-directories-first"
