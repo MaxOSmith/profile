@@ -68,8 +68,8 @@ alias ggraph="git log --graph --full-history --all --color --pretty=tformat:\"%x
 # Colors
 #=================================================
 # Load base16 theme
-# BASE16_SHELL="$HOME/profile/themes/base16-eighties-dark.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL="$HOME/profile/themes/base16-eighties-dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Special
 COLOR_OFF='\[\e[0m\]'
