@@ -80,7 +80,7 @@ FI_BLUE='\[\e[0;94m\]'
 
 # Prompt String
 set_bg_count
-PS1="${FI_YELLOW}[\t]${FI_BLUE}\w${FI_YELLOW}\$(__git_ps1)\$(set_bg_count)\$${COLOR_OFF}"
+PS1="${FI_YELLOW}[\t] \u@\h:${FI_BLUE}\w${FI_YELLOW}\$(__git_ps1)\$(set_bg_count)\n\$${COLOR_OFF}"
 
 # Color ls - Stolen from DJSnider
 alias ls="ls --color=auto --group-directories-first"
