@@ -67,6 +67,8 @@ alias ggraph="git log --graph --full-history --all --color --pretty=tformat:\"%x
 #=================================================
 # Colors
 #=================================================
+export TERM=xterm-256color
+
 # Load base16 theme
 BASE16_SHELL="$HOME/profile/themes/base16-eighties-dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
@@ -83,7 +85,7 @@ set_bg_count
 PS1="${FI_YELLOW}[\t] \u@\h:${FI_BLUE}\w${FI_YELLOW}\$(__git_ps1)\$(set_bg_count)\n\$${COLOR_OFF}"
 
 # Color ls - Stolen from DJSnider
-alias ls="ls --color=auto --group-directories-first"
+alias ls="gls --color=auto --group-directories-first"
 ## Blue directories
 LS_COLORS="no=00:di=34;01:tw=34;01:ow=34;01"
 ## Everthing else white

@@ -2,9 +2,9 @@
 ;; (load-theme 'tsdh-dark)
 (load "~/profile/themes/base16-eighties-dark.el")
 
-;; 4 tab spaces
+;; 2 tab spaces
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
 
@@ -17,7 +17,7 @@
 
 ;; Line numbering
 (global-linum-mode 1)
-(set-face-foreground 'linum "#f2777a")
+(set-face-foreground 'linum "#515151")
 (setq linum-format "%3d|")
 
 ;; Yes/No questions
