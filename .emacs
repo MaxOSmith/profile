@@ -25,3 +25,7 @@
 
 ;; C++ mode in header files
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+;; Spell Checking
+(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
