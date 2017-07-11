@@ -11,7 +11,7 @@ function lla() {
     ls -la $1
 }
 
-# History search
+# History search.
 #
 #    e.g., Search history for "bashrc"
 # $hgrep bashrc
@@ -19,25 +19,20 @@ function hgrep() {
     history | grep $1
 }
 
-# Ignore duplicates in history. Options in colon seperated list
-#
-# Options:
-#    ignorespace: ignore lines beginning with a space
-#    ignoredups:  ignore lines matching previous history entry
-#    ignoreboth:  ignore space and ignore dups
-#    erasedups:   erase all previous lines matching current line
+# Ignore duplicates in history. Options in colon seperated list.
 export HISTCONTROL=ignoreboth:erasedups
 
-# Emacs as default editor
-# export GIT_EDITOR=emacs
-# export VISUAL=emacs
-# export EDITOR=emacs
+# Emacs as default editor.
+export GIT_EDITOR=emacs
+export VISUAL=emacs
+export EDITOR=emacs
 
 #=================================================
 # Import Statements
 #=================================================
-# Git aware prompt
+# Git aware prompt.
 source ~/profile/bash/git-prompt.sh
+# Background process counter.
 source ~/profile/bash/bg-count.sh
 
 #=================================================
@@ -85,7 +80,7 @@ set_bg_count
 PS1="${FI_YELLOW}[\t] \u@\h:${FI_BLUE}\w${FI_YELLOW}\$(__git_ps1)\$(set_bg_count)\n\$${COLOR_OFF}"
 
 # Color ls - Stolen from DJSnider
-alias ls="gls --color=auto --group-directories-first"
+alias ls="ls --color=auto --group-directories-first"
 ## Blue directories
 LS_COLORS="no=00:di=34;01:tw=34;01:ow=34;01"
 ## Everthing else white
@@ -93,3 +88,10 @@ LS_COLORS=$LS_COLORS":fi=00:ln=00:pi=00:so=00:bd=00:cd=00:or=00:mi=00:ex=00"
 ## Executables to be red
 LS_COLORS=$LS_COLORS":*.sh=31:*.exe=31:*.bat=31"
 export LS_COLORS
+
+#=================================================
+# Python
+#=================================================
+
+# Matplotlib settings file.
+export MATPLOTLIBRC=~/profile/matplotlib
