@@ -29,3 +29,8 @@
 ;; Spell Checking
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
+
+;; Neo-Tree
+(add-to-list 'load-path "~/profile/emacs/neotree")
+(require 'neotree)
+(global-set-key (kbd "<backtab>") 'neotree-toggle)
