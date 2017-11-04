@@ -27,6 +27,8 @@ export GIT_EDITOR=emacs
 export VISUAL=emacs
 export EDITOR=emacs
 
+alias wtf='python -m ipdb -c continue'
+
 #=================================================
 # Import Statements
 #=================================================
@@ -38,12 +40,6 @@ source ~/profile/bash/bg-count.sh
 #=================================================
 # Aliases
 #=================================================
-# SSH shortcuts
-alias ssh_caen="ssh mxsmith@login.engin.umich.edu"
-alias ssh_flux="ssh mxsmith@flux-login.arc-ts.umich.edu"
-alias ssh_flux_campus="mxsmith@flux-campus-login.arc-ts.umich.edu"
-alias ssh_485="ssh mxsmith@eecs485-02.eecs.umich.edu"
-
 # Add Anaconda to path
 export PATH=$PATH:/home/mxsmith/anaconda/bin
 
@@ -92,6 +88,5 @@ export LS_COLORS
 #=================================================
 # Python
 #=================================================
-
 # Matplotlib settings file.
 export MATPLOTLIBRC=~/profile/matplotlib
