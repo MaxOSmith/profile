@@ -28,6 +28,7 @@ export VISUAL=emacs
 export EDITOR=emacs
 
 alias wtf='python -m ipdb -c continue'
+alias dirs="dirs -v"
 
 #=================================================
 # Import Statements
@@ -76,7 +77,7 @@ set_bg_count
 PS1="${FI_YELLOW}[\t] \u@\h:${FI_BLUE}\w${FI_YELLOW}\$(__git_ps1)\$(set_bg_count)\n\$${COLOR_OFF}"
 
 # Color ls - Stolen from DJSnider
-alias ls="ls --color=auto --group-directories-first"
+alias ls="gls --color=auto --group-directories-first"
 ## Blue directories
 LS_COLORS="no=00:di=34;01:tw=34;01:ow=34;01"
 ## Everthing else white

@@ -218,7 +218,7 @@ backend      : TkAgg
 #text.color          : black
 
 ### LaTeX customizations. See http://wiki.scipy.org/Cookbook/Matplotlib/UsingTex
-#text.usetex         : False  # use latex for all text handling. The following fonts
+text.usetex         : True    # use latex for all text handling. The following fonts
                               # are supported through the usual rc parameter settings:
                               # new century schoolbook, bookman, times, palatino,
                               # zapf chancery, charter, serif, sans-serif, helvetica,
@@ -313,7 +313,7 @@ backend      : TkAgg
                                    # according to the user's locale.
                                    # For example, use ',' as a decimal
                                    # separator in the fr_FR locale.
-#axes.formatter.use_mathtext : False # When True, use mathtext for scientific
+axes.formatter.use_mathtext : True # When True, use mathtext for scientific
                                      # notation.
 #axes.formatter.useoffset      : True    # If True, the tick label formatter
                                          # will default to labeling ticks relative

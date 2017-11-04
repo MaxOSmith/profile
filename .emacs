@@ -71,3 +71,8 @@
 ;; - fill-column-indicator
 ;; - python-mode
 ;; - neotree
+
+;; Neo-Tree
+(add-to-list 'load-path "~/profile/emacs/neotree")
+(require 'neotree)
+(global-set-key (kbd "<backtab>") 'neotree-toggle)

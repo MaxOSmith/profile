@@ -2,13 +2,32 @@ Host elisa1
      User smithmax
      Hostname elisa1.iro.umontreal.ca
      LocalForward 9001 127.0.0.1:9001
+     ForwardX11 yes
 
 Host elisa2
      User smithmax
      Hostname elisa2.iro.umontreal.ca
      LocalForward 9001 127.0.0.1:9001
+     ForwardX11 yes
 
 Host elisa3
      User smithmax
      Hostname elisa3.iro.umontreal.ca
      LocalForward 9001 127.0.0.1:9001
+     ForwardX11 yes
+
+
+Host caen_on
+     User mxsmith
+     Hostname oncampus-course.engin.umich.edu
+     ForwardX11 yes
+
+Host caen_off
+     User mxsmith
+     Hostname login-course-2fa.engin.umich.edu
+     ForwardX11 yes
+
+Host eecs583
+     User mxsmith
+     Hostname eecs583b.eecs.umich.edu
+     ForwardX11 yes
