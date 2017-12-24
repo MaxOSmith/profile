@@ -1,22 +1,28 @@
-Host elisa1
+Host *
+     ControlMaster auto
+     ControlPath ~/.ssh/cm_socket/%r@%h:%p
+
+
+# Jump Hosts for MILA ----------------------------
+Host elisa*
      User smithmax
-     Hostname elisa1.iro.umontreal.ca
+     Hostname %h.iro.umontreal.ca
      LocalForward 9001 127.0.0.1:9001
      ForwardX11 yes
+     PreferredAuthentications keyboard-interactive,password
+     PubkeyAuthentication no
 
-Host elisa2
+# MILA -------------------------------------------
+Host leto* kepler* eos* bart*
      User smithmax
-     Hostname elisa2.iro.umontreal.ca
+     Hostname %h
      LocalForward 9001 127.0.0.1:9001
      ForwardX11 yes
+     ProxyCommand ssh elisa3 -W %h:%p
+     PreferredAuthentications keyboard-interactive,password
+     PubkeyAuthentication no
 
-Host elisa3
-     User smithmax
-     Hostname elisa3.iro.umontreal.ca
-     LocalForward 9001 127.0.0.1:9001
-     ForwardX11 yes
-
-
+# CAEN -------------------------------------------
 Host caen_on
      User mxsmith
      Hostname oncampus-course.engin.umich.edu
@@ -27,7 +33,8 @@ Host caen_off
      Hostname login-course-2fa.engin.umich.edu
      ForwardX11 yes
 
-Host eecs583
-     User mxsmith
-     Hostname eecs583b.eecs.umich.edu
+# Other ------------------------------------------
+Host cedar
+     User maxsmith
+     Hostname cedar.computecanada.ca
      ForwardX11 yes
